@@ -1,0 +1,36 @@
+{
+    "presets": [
+        ["env", {
+            "modules": false
+        }],
+        "stage-1"
+    ],
+    "plugins": [
+        ["transform-runtime", { "polyfill": true }],
+        "syntax-dynamic-import"
+    ],
+    "env": {
+        "browser": {
+            "presets": [
+                [
+                    "env", {
+                        "targets": {
+                            "browsers": ["last 2 versions", "safari >= 7"]
+                        }
+                    }
+                ]
+            ]
+        },
+        "node": {
+            "presets": [
+                [
+                    "env", {
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ]
+            ]
+        }
+    }
+}
