@@ -1,5 +1,5 @@
 node_modules
-public
 server-build
 .vscode
 dist
+package-lock.json

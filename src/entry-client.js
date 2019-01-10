@@ -11,8 +11,6 @@ document.body.appendChild(bar.$el)
 
 const { app, router, store } = createApp()
 
-createPersistedState(store)
-
 Vue.mixin({
     beforeRouteUpdate (to, from, next) {
         const { asyncData } = this.$options
@@ -49,6 +47,7 @@ Vue.mixin({
 
 if (window.__INITIAL_STATE__) {
     store.replaceState(window.__INITIAL_STATE__)
+    createPersistedState({store})
 }
 
 Bus.$on('auth', () => {

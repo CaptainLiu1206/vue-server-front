@@ -9,8 +9,8 @@ export function createRouter () {
         fallback: false,
         scrollBehavior: () => ({ y: 0 }),
         routes: [
-            { name: 'Home', path: '/home', component: () => import('../views/home.vue') },
-            { name: 'Login', path: '/login', component: () => import('../views/login.vue') },
+            { name: 'Home', path: '/home', component: () => import('../views/home/home.vue') },
+            { name: 'Login', path: '/login', component: () => import('../views/login/login.vue') },
             { path: '/', redirect: '/home'}
         ]
     })
